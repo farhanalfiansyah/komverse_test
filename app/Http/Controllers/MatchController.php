@@ -47,7 +47,7 @@ class MatchController extends Controller
     public function show($id)
     {
         $response = Http::post('https://api.komoverse.io/v1/match-history/detail', [
-            'match_id' => '5ffa3be5-8259-4961-9d7e-8ceb1ef38b9d'
+            'match_id' => $id
         ]);
         $jsonData = $response->json();
         $match_details = [];
